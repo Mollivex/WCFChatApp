@@ -72,12 +72,10 @@ namespace ChatClient
             DisconnectUser();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) { }
-        private void tbMessage_TextChanged(object sender, TextChangedEventArgs e) { }
-
         public void MsgCallback(string msg)
         {
             lbChat.Items.Add(msg);
+            lbChat.ScrollIntoView(lbChat.Items[lbChat.Items.Count - 1]);
         }
 
         private void tbMessage_KeyDown(object sender, KeyEventArgs e)
@@ -91,5 +89,7 @@ namespace ChatClient
                 }
             }
         }
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) { }
+        private void tbMessage_TextChanged(object sender, TextChangedEventArgs e) { }
     }
 }

@@ -31,7 +31,7 @@ namespace wcf_chat
             };
             nextID++;
 
-            SendMsg(user.Name + " has connected to the chat!", 0);
+            SendMsg(": " + user.Name + " has connected to the chat!", 0);
             users.Add(user);
             return user.ID; 
         }
@@ -47,7 +47,7 @@ namespace wcf_chat
             if (user != null)
             {
                 users.Remove(user);
-                SendMsg(user.Name + " has left the chat", 0);
+                SendMsg(": " + user.Name + " has left the chat", 0);
             }
         }
 
