@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="513">
+        Title="MainWindow" Height="400" Width="600" Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbUserName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="User name" VerticalAlignment="Top" Width="351" Margin="152,10,0,0" Height="33" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="bConDiscon" Click="Button_Click" Content="Connect" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="137"/>
-        <ListBox x:Name="lbChat" Margin="0,48,0,0" HorizontalAlignment="Center" Width="493" Grid.RowSpan="2" Height="274" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbMessage" HorizontalAlignment="Center" Margin="0,0,0,10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" Width="493" Height="97" Grid.Row="1" TextChanged="tbMessage_TextChanged"/>
+        <TextBox x:Name="tbUserName" TextWrapping="Wrap" Text="User name" VerticalAlignment="Center" Margin="160,10,10,0" Height="30" TextChanged="TextBox_TextChanged" FontWeight="Bold" FontSize="16" TextDecorations="Underline" Cursor="Hand"/>
+        <Button x:Name="bConDiscon" Click="Button_Click" Content="Connect" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Center" Height="30" Width="140"/>
+        <ListBox x:Name="lbChat" Margin="10,10,10,85" Grid.Row="1"/>
+        <TextBox x:Name="tbMessage" Margin="10,240,10,10" TextWrapping="Wrap" Text="Type your message..." Grid.Row="1" TextChanged="tbMessage_TextChanged" KeyDown="tbMessage_KeyDown" SelectionOpacity="0.1" Cursor="Hand" Background="White"/>
 
     </Grid>
 </Window>
