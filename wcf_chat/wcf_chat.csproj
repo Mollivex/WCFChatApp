@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="IServiceChat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerUser.cs" />
     <Compile Include="ServiceChat.cs" />
   </ItemGroup>
   <ItemGroup>
