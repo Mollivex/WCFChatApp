@@ -11,7 +11,7 @@ namespace wcf_chat
 {
     [ServiceContract(CallbackContract = typeof(IServiceChatCallback))]
     public interface IServiceChat
-    {
+    { 
         [OperationContract]
         int Connect(string name);
 
